@@ -1,0 +1,455 @@
+//"Lottery": [
+
+//  {
+
+//    //"LotteryId": "12345",
+
+//    "LotteryType": "MegaMillions",
+
+//    "TicketPrice": 2.5,
+
+//    "StartDate": "2022-10-15",
+
+//    "EndDate": "2022-12-15",
+
+//    "JackpotAmount": 50000000,
+
+//    "OddsOfWinning": 1.25,
+
+//    "TicketSalesDeadline": "2022-12-15",
+
+//    "DrawFrequency": "DAILY",
+
+//    "TicketSaleChannel": "RetailStores",
+
+//    "WinningsAmount": 1000
+
+//  },
+
+//  {
+
+//   // "LotteryId": "67890",
+
+//    "LotteryType": "Powerball",
+
+//    "TicketPrice": 3.0,
+
+//    "StartDate": "2022-11-01",
+
+//    "EndDate": "2022-12-31",
+
+//    "JackpotAmount": 70000000,
+
+//    "OddsOfWinning": 1.50,
+
+//    "TicketSalesDeadline": "2022-12-31",
+
+//    "DrawFrequency": "WEEKLY",
+
+//    "TicketSaleChannel": "GasStations",
+
+//    "WinningsAmount": 1500
+
+//  },
+
+//  {
+
+//    //"LotteryId": "24680",
+
+//    "LotteryType": "EuroMillions",
+
+//    "TicketPrice": 2.0,
+
+//    "StartDate": "2022-11-10",
+
+//    "EndDate": "2022-12-20",
+
+//    "JackpotAmount": 40000000,
+
+//    "OddsOfWinning": 1.75,
+
+//    "TicketSalesDeadline": "2022-12-20",
+
+//    "DrawFrequency": "MONTHLY",
+
+//    "TicketSaleChannel": "Online",
+
+//    "WinningsAmount": 1200
+
+//  },
+
+//  {
+
+//   // "LotteryId": "13579",
+
+//    "LotteryType": "LottoMax",
+
+//    "TicketPrice": 5.0,
+
+//    "StartDate": "2022-10-20",
+
+//    "EndDate": "2022-12-25",
+
+//    "JackpotAmount": 60000000,
+
+//    "OddsOfWinning": 1.20,
+
+//    "TicketSalesDeadline": "2022-12-25",
+
+//    "DrawFrequency": "WEEKLY",
+
+//    "TicketSaleChannel": "Pharmacies",
+
+//    "WinningsAmount": 1800
+
+//  },
+
+//  {
+
+//   // "LotteryId": "36912",
+
+//    "LotteryType": "OzLotto",
+
+//    "TicketPrice": 4.0,
+
+//    "StartDate": "2022-11-05",
+
+//    "EndDate": "2022-12-30",
+
+//    "JackpotAmount": 55000000,
+
+//    "OddsOfWinning": 1.30,
+
+//    "TicketSalesDeadline": "2022-12-30",
+
+//    "DrawFrequency": "DAILY",
+
+//    "TicketSaleChannel": "GasStations" ,
+
+//    "WinningsAmount": 1400
+
+//  }
+
+//],
+
+//"Product": [
+
+//{
+
+////"ProductId": "P123",
+
+//"Name": "Smartwatch",
+
+//"Description": "Fitness tracker with heart rate monitor",
+
+//"Picture": "smartwatch.jpg",
+
+//"Marketer": "TechGadgets Ltd"
+
+//},
+
+//{
+
+////"ProductId": "P456",
+
+//"Name": "Cookware Set",
+
+//"Description": "Complete set of durable non-stick pots and pans",
+
+//"Picture": "cookwareset.jpg",
+
+//"Marketer": "HomeEssentials Inc"
+
+//},
+
+//{
+
+////"ProductId": "P789",
+
+//"Name": "Bluetooth Speaker",
+
+//"Description": "Portable speaker with long battery life",
+
+//"Picture": "bluetoothspeaker.jpg",
+
+//"Marketer": "AudioPlus"
+
+//},
+
+//{
+
+////"ProductId": "P101",
+
+//"Name": "Running Shoes",
+
+//"Description": "High-performance athletic shoes for runners",
+
+//"Picture": "runningshoes.jpg",
+
+//"Marketer": "Sportify"
+
+//},
+
+//{
+
+////"ProductId": "P202",
+
+//"Name": "Coffee Maker",
+
+//"Description": "Espresso machine for coffee enthusiasts",
+
+//"Picture": "coffeemaker.jpg",
+
+//"Marketer": "BeanToCup"
+
+//}
+
+//],
+
+//"ProductInLottery": [
+
+//{
+
+////"ProductInLotteryId": "PLI001",
+
+//"ProductId": 1,
+
+//"LotteryId": 1,
+
+//"WinnerId": 1,
+
+//"ClaimDeadline": "2023-01-15",
+
+//"PrizeDistribution": "HAND_DELIVERY"
+
+//},
+
+//{
+
+////"ProductInLotteryId": "PLI002",
+
+//"ProductId": 2,
+
+//"LotteryId": 2,
+
+//"WinnerId": 2,
+
+//"ClaimDeadline": "2023-02-01",
+
+//"PrizeDistribution": "EXPRESS_COURIER"
+
+//},
+
+//{
+
+////"ProductInLotteryId": "PLI003",
+
+//"ProductId": 3,
+
+//"LotteryId": 3,
+
+//"WinnerId": 3,
+
+//"ClaimDeadline": "2023-03-20",
+
+//"PrizeDistribution": "BANK_TRANSFER"
+
+//},
+
+//{
+
+////"ProductInLotteryId": "PLI004",
+
+//"ProductId": 4,
+
+//"LotteryId": 4,
+
+//"WinnerId": 4,
+
+//"ClaimDeadline": "2023-04-05",
+
+//"PrizeDistribution": "IN_PERSON_CEREMONY"
+
+//},
+
+//{
+
+////"ProductInLotteryId": "PLI005",
+
+//"ProductId": 5,
+
+//"LotteryId": 5,
+
+//"WinnerId": 5,
+
+//"ClaimDeadline": "2023-05-10",
+
+//"PrizeDistribution": "GIFT_CARD"
+
+//}
+
+//],
+
+//"Ticket": [
+
+//{
+
+////"TicketId": "T001",
+
+//"LotteryId": 1,
+
+//"Status": "PURCHASED",
+
+//"UserId": 1,
+
+//"PurchaseDate": "2022-11-20",
+
+//"ExpiryDate": "2023-01-15",
+
+//"PrizeWon": true,
+
+//"TicketValidationStatus": "VALID"
+
+//},
+
+//{
+
+////"TicketId": "T002",
+
+//"LotteryId": 2,
+
+//"Status": "WINNER",
+
+//"UserId": 2,
+
+//"PurchaseDate": "2022-12-10",
+
+//"ExpiryDate": "2023-02-01",
+
+//"PrizeWon": false,
+
+//"TicketValidationStatus": "INVALID"
+
+//},
+
+//{
+
+////"TicketId": "T003",
+
+//"LotteryId": 3,
+
+//"Status": "NOT_A_WINNER",
+
+//"UserId": 3,
+
+//"PurchaseDate": "2022-11-27",
+
+//"ExpiryDate": "2023-01-20",
+
+//"PrizeWon": false,
+
+//"TicketValidationStatus": "DUPLICATE"
+
+//},
+
+//{
+
+////"TicketId": "T004",
+
+//"LotteryId": 4,
+
+//"Status": "CLAIMED",
+
+//"UserId": 4,
+
+//"PurchaseDate": "2022-12-05",
+
+//"ExpiryDate": "2023-01-25",
+
+//"PrizeWon": true,
+
+//"TicketValidationStatus": "EXPIRED"
+
+//},
+
+//{
+
+////"TicketId": "T005",
+
+//"LotteryId": 5,
+
+//"Status": "EXPIRED",
+
+//"UserId": 5,
+
+//"PurchaseDate": "2022-11-15",
+
+//"ExpiryDate": "2023-01-10",
+
+//"PrizeWon": false,
+
+//"TicketValidationStatus": "INVALID"
+
+//},
+
+//{
+
+////"TicketId": "T006",
+
+//"LotteryId": 6,
+
+//"Status": "PURCHASED",
+
+//"UserId": 6,
+
+//"PurchaseDate": "2022-10-25",
+
+//"ExpiryDate": "2022-12-20",
+
+//"PrizeWon": true,
+
+//"TicketValidationStatus": "VALID"
+
+//},
+
+//{
+
+////"TicketId": "T007",
+
+//"LotteryId": 7,
+
+//"Status": "WINNER",
+
+//"UserId": 7,
+
+//"PurchaseDate": "2022-11-05",
+
+//"ExpiryDate": "2022-12-31",
+
+//"PrizeWon": false,
+
+//"TicketValidationStatus": "INVALID"
+
+//},
+
+//{
+
+////"TicketId": "T008",
+
+//"LotteryId": 8,
+
+//"Status": "NOT_A_WINNER",
+
+//"UserId": 8,
+
+//"PurchaseDate": "2022-11-10",
+
+//"ExpiryDate": "2022-12-10",
+
+//"PrizeWon": false,
+
+//"TicketValidationStatus": "DUPLICATE"
+
+//}
+
+//],

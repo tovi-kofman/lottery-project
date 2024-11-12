@@ -2,6 +2,11 @@
 {
     public enum LotteryType
     {
-        None = 0
+        MegaMillions,
+        Powerball,
+        EuroMillions,
+        LottoMax,
+        SuperEnalotto,
+        OzLotto
     }
 }

@@ -1,6 +1,13 @@
+using MyProject.DTO;
+using MyProject.Entities;
+using MyProject.Interface;
+using MyProject.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<IDataContext, DataContext>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

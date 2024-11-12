@@ -1,49 +1,55 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MyProject.Entities;
-using MyProject.Services;
+﻿//using Microsoft.AspNetCore.Mvc;
+//using MyProject.Entities;
+//using MyProject.Services;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+//// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace MyProject.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ProductInLotteryController : ControllerBase
-    {
-        public ProductInLotteryService ProductInLotteryS { get; set; }
-        // GET: api/<ProductInLotteryController>
-        [HttpGet]
-        public IEnumerable<ProductInLottery> Get()
-        {
-            return ProductInLotteryS.GetProductsInLotteries();
-        }
+//namespace MyProject.Controllers
+//{
+//    [Route("api/[controller]")]
+//    [ApiController]
+//    public class ProductInLotteryController : ControllerBase
+//    {
+//        public ProductInLotteryService ProductInLotteryS { get; set; }
+//        // GET: api/<ProductInLotteryController>
+//        [HttpGet]
+//        public ActionResult< List<ProductInLottery>> Get()
+//        {
+//            return Ok( ProductInLotteryS.GetProductsInLotteries());
+//        }
 
-        // GET api/<ProductInLotteryController>/5
-        [HttpGet("{id}")]
-        public ProductInLottery Get(int id)
-        {
-            return ProductInLotteryS.GetProductInLotteryById(id);
-        }
+//        // GET api/<ProductInLotteryController>/5
+//        [HttpGet("{id}")]
+//        public ActionResult< ProductInLottery> Get(int id)
+//        {
+//            ProductInLottery p = ProductInLotteryS.GetProductInLotteryById(id);
+//            if (p== null)
+//            {
+//                return NotFound(p);
+//            }
+//            return Ok( p );
+//        }
 
-        // POST api/<ProductInLotteryController>
-        [HttpPost]
-        public void Post([FromBody] ProductInLottery productInLottery)
-        {
-            ProductInLotteryS.AddProductInLottery(productInLottery);
-        }
+//        // POST api/<ProductInLotteryController>
+//        [HttpPost]
+//        public ActionResult<bool> Post([FromBody] ProductInLottery productInLottery)
+//        {
+//             ProductInLotteryS.AddProductInLottery(productInLottery);
+//            return Ok( true );
+//        }
 
-        // PUT api/<ProductInLotteryController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] ProductInLottery productInLottery)
-        {
-            ProductInLotteryS.UpdatePrpductInLottery(id, productInLottery);
-        }
+//        // PUT api/<ProductInLotteryController>/5
+//        [HttpPut("{id}")]
+//        public ActionResult<bool> Put(int id, [FromBody] ProductInLottery productInLottery)
+//        {
+//            return ProductInLotteryS.UpdatePrpductInLottery(id, productInLottery);
+//        }
 
-        // DELETE api/<ProductInLotteryController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-            ProductInLotteryS.RemoveProductInLottery(id);
-        }
-    }
-}
+//        // DELETE api/<ProductInLotteryController>/5
+//        [HttpDelete("{id}")]
+//        public ActionResult<bool> Delete(int id)
+//        {
+//            return ProductInLotteryS.RemoveProductInLottery(id);
+//        }
+//    }
+//}

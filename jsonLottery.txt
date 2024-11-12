@@ -1,0 +1,1316 @@
+{
+
+"Lottery": [
+
+{
+
+"LotteryId": "12345",
+
+"LotteryType": "Mega Millions",
+
+"TicketPrice": 2.5,
+
+"StartDate": "2022-10-15",
+
+"EndDate": "2022-12-15",
+
+"JackpotAmount": 50000000,
+
+"OddsOfWinning": 1.25,
+
+"TicketSalesDeadline": "2022-12-15 23:59:59",
+
+"DrawFrequency": "Twice a week",
+
+"TicketSalesChannel": ["Online", "Retail Stores", "Mobile App"],
+
+"WinningsAmount": 1000
+
+},
+
+{
+
+"LotteryId": "67890",
+
+"LotteryType": "Powerball",
+
+"TicketPrice": 3.0,
+
+"StartDate": "2022-11-01",
+
+"EndDate": "2022-12-31",
+
+"JackpotAmount": 70000000,
+
+"OddsOfWinning": 1.50,
+
+"TicketSalesDeadline": "2022-12-31 19:00:00",
+
+"DrawFrequency": "Weekly",
+
+"TicketSalesChannel": ["Online", "Gas Stations", "Convenience Stores"],
+
+"WinningsAmount": 1500
+
+},
+
+{
+
+"LotteryId": "24680",
+
+"LotteryType": "EuroMillions",
+
+"TicketPrice": 2.0,
+
+"StartDate": "2022-11-10",
+
+"EndDate": "2022-12-20",
+
+"JackpotAmount": 40000000,
+
+"OddsOfWinning": 1.75,
+
+"TicketSalesDeadline": "2022-12-20 22:00:00",
+
+"DrawFrequency": "Biweekly",
+
+"TicketSalesChannel": ["Online", "Supermarkets", "Newsagents"],
+
+"WinningsAmount": 1200
+
+},
+
+{
+
+"LotteryId": "13579",
+
+"LotteryType": "Lotto Max",
+
+"TicketPrice": 5.0,
+
+"StartDate": "2022-10-20",
+
+"EndDate": "2022-12-25",
+
+"JackpotAmount": 60000000,
+
+"OddsOfWinning": 1.20,
+
+"TicketSalesDeadline": "2022-12-25 20:00:00",
+
+"DrawFrequency": "Once a week",
+
+"TicketSalesChannel": ["Online", "Pharmacies", "Liquor Stores"],
+
+"WinningsAmount": 1800
+
+},
+
+{
+
+"LotteryId": "36912",
+
+"LotteryType": "Oz Lotto",
+
+"TicketPrice": 4.0,
+
+"StartDate": "2022-11-05",
+
+"EndDate": "2022-12-30",
+
+"JackpotAmount": 55000000,
+
+"OddsOfWinning": 1.30,
+
+"TicketSalesDeadline": "2022-12-30 18:00:00",
+
+"DrawFrequency": "Every Tuesday",
+
+"TicketSalesChannel": ["Online", "Bookstores", "Gas Stations"],
+
+"WinningsAmount": 1400
+
+}
+
+],
+
+"Product": [
+
+{
+
+"ProductId": "P123",
+
+"Name": "Smartwatch",
+
+"Description": "Fitness tracker with heart rate monitor",
+
+"Picture": "smartwatch.jpg",
+
+"Marketer": "TechGadgets Ltd"
+
+},
+
+{
+
+"ProductId": "P456",
+
+"Name": "Cookware Set",
+
+"Description": "Complete set of durable non-stick pots and pans",
+
+"Picture": "cookwareset.jpg",
+
+"Marketer": "HomeEssentials Inc"
+
+},
+
+{
+
+"ProductId": "P789",
+
+"Name": "Bluetooth Speaker",
+
+"Description": "Portable speaker with long battery life",
+
+"Picture": "bluetoothspeaker.jpg",
+
+"Marketer": "AudioPlus"
+
+},
+
+{
+
+"ProductId": "P101",
+
+"Name": "Running Shoes",
+
+"Description": "High-performance athletic shoes for runners",
+
+"Picture": "runningshoes.jpg",
+
+"Marketer": "Sportify"
+
+},
+
+{
+
+"ProductId": "P202",
+
+"Name": "Coffee Maker",
+
+"Description": "Espresso machine for coffee enthusiasts",
+
+"Picture": "coffeemaker.jpg",
+
+"Marketer": "BeanToCup"
+
+}
+
+],
+
+"ProductInLottery": [
+
+{
+
+"ProductInLotteryId": "PLI001",
+
+"ProductId": "P123",
+
+"LotteryId": "12345",
+
+"WinnerId": "W567",
+
+"ClaimDeadline": "2023-01-15",
+
+"PrizeDistribution": "HAND_DELIVERY"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI002",
+
+"ProductId": "P456",
+
+"LotteryId": "67890",
+
+"WinnerId": "W890",
+
+"ClaimDeadline": "2023-02-01",
+
+"PrizeDistribution": "EXPRESS_COURIER"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI003",
+
+"ProductId": "P789",
+
+"LotteryId": "13579",
+
+"WinnerId": "W246",
+
+"ClaimDeadline": "2023-03-20",
+
+"PrizeDistribution": "BANK_TRANSFER"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI004",
+
+"ProductId": "P101",
+
+"LotteryId": "24680",
+
+"WinnerId": "W135",
+
+"ClaimDeadline": "2023-04-05",
+
+"PrizeDistribution": "IN_PERSON_CEREMONY"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI005",
+
+"ProductId": "P202",
+
+"LotteryId": "36912",
+
+"WinnerId": "W369",
+
+"ClaimDeadline": "2023-05-10",
+
+"PrizeDistribution": "GIFT_CARD"
+
+}
+
+],
+
+"Ticket": [
+
+{
+
+"TicketId": "T001",
+
+"LotteryId": "12345",
+
+"Status": "PURCHASED",
+
+"UserId": "U123",
+
+"PurchaseDate": "2022-11-20",
+
+"ExpiryDate": "2023-01-15",
+
+"PrizeWon": true,
+
+"TicketValidationStatus": "VALID"
+
+},
+
+{
+
+"TicketId": "T002",
+
+"LotteryId": "67890",
+
+"Status": "WINNER",
+
+"UserId": "U456",
+
+"PurchaseDate": "2022-12-10",
+
+"ExpiryDate": "2023-02-01",
+
+"PrizeWon": false,
+
+"TicketValidationStatus": "INVALID"
+
+},
+
+{
+
+"TicketId": "T003",
+
+"LotteryId": "24680",
+
+"Status": "NOT_A_WINNER",
+
+"UserId": "U789",
+
+"PurchaseDate": "2022-11-27",
+
+"ExpiryDate": "2023-01-20",
+
+"PrizeWon": false,
+
+"TicketValidationStatus": "DUPLICATE"
+
+},
+
+{
+
+"TicketId": "T004",
+
+"LotteryId": "13579",
+
+"Status": "CLAIMED",
+
+"UserId": "U101",
+
+"PurchaseDate": "2022-12-05",
+
+"ExpiryDate": "2023-01-25",
+
+"PrizeWon": true,
+
+"TicketValidationStatus": "EXPIRED"
+
+},
+
+{
+
+"TicketId": "T005",
+
+"LotteryId": "36912",
+
+"Status": "EXPIRED",
+
+"UserId": "U202",
+
+"PurchaseDate": "2022-11-15",
+
+"ExpiryDate": "2023-01-10",
+
+"PrizeWon": false,
+
+"TicketValidationStatus": "INVALID"
+
+}
+
+],
+
+"User": [
+
+{
+
+"UserId": "U123",
+
+"FirstName": "Amy",
+
+"LastName": "Johnson",
+
+"Email": "amyj@example.com",
+
+"Password": "securepassword123",
+
+"PhoneNumber": "+1234567890",
+
+"Address": "456 Elm St, City, Country",
+
+"AccountType": "Premium"
+
+},
+
+{
+
+"UserId": "U456",
+
+"FirstName": "Mark",
+
+"LastName": "Williams",
+
+"Email": "markw@example.com",
+
+"Password": "strongpass456",
+
+"PhoneNumber": "+9876543210",
+
+"Address": "789 Pine Ave, Town, Country",
+
+"AccountType": "Standard"
+
+},
+
+{
+
+"UserId": "U789",
+
+"FirstName": "Sarah",
+
+"LastName": "Brown",
+
+"Email": "sarahb@example.com",
+
+"Password": "safe12345",
+
+"PhoneNumber": "+1122334455",
+
+"Address": "321 Oak St, Village, Country",
+
+"AccountType": "Premium"
+
+},
+
+{
+
+"UserId": "U101",
+
+"FirstName": "David",
+
+"LastName": "Lee",
+
+"Email": "davidl@example.com",
+
+"Password": "dlee5678",
+
+"PhoneNumber": "+9988776655",
+
+"Address": "654 Maple Ave, City, Country",
+
+"AccountType": "Standard"
+
+},
+
+{
+
+"UserId": "U202",
+
+"FirstName": "Emily",
+
+"LastName": "Moore",
+
+"Email": "emilym@example.com",
+
+"Password": "emoore90",
+
+"PhoneNumber": "+5544332211",
+
+"Address": "123 Birch St, Town, Country",
+
+"AccountType": "Premium"
+
+}
+
+]
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+"Lottery": [
+
+{
+
+"LotteryId": "1111",
+
+"LotteryType": "Lucky Draw",
+
+"TicketPrice": 1.5,
+
+"StartDate": "2022-10-01",
+
+"EndDate": "2022-11-30",
+
+"JackpotAmount": 10000,
+
+"OddsOfWinning": 0.05,
+
+"TicketSalesDeadline": "2022-11-30",
+
+"DrawFrequency": "Once per month",
+
+"TicketSaleChannel": ["Online", "Retail Stores"],
+
+"WinningsAmount": 500
+
+},
+
+{
+
+"LotteryId": "2222",
+
+"LotteryType": "Scratch-off Cards",
+
+"TicketPrice": 0.75,
+
+"StartDate": "2022-12-01",
+
+"EndDate": "2023-01-31",
+
+"JackpotAmount": 5000,
+
+"OddsOfWinning": 0.10,
+
+"TicketSalesDeadline": "2023-01-31",
+
+"DrawFrequency": "Daily",
+
+"TicketSaleChannel": ["Grocery Stores", "Gas Stations"],
+
+"WinningsAmount": 200
+
+},
+
+{
+
+"LotteryId": "3333",
+
+"LotteryType": "Bingo Night",
+
+"TicketPrice": 2.0,
+
+"StartDate": "2022-11-15",
+
+"EndDate": "2022-12-15",
+
+"JackpotAmount": 7500,
+
+"OddsOfWinning": 0.08,
+
+"TicketSalesDeadline": "2022-12-15",
+
+"DrawFrequency": "Weekly",
+
+"TicketSaleChannel": ["Community Center", "Online"],
+
+"WinningsAmount": 300
+
+},
+
+{
+
+"LotteryId": "4444",
+
+"LotteryType": "Sports Betting",
+
+"TicketPrice": 5.0,
+
+"StartDate": "2022-12-10",
+
+"EndDate": "2023-02-28",
+
+"JackpotAmount": 12000,
+
+"OddsOfWinning": 0.15,
+
+"TicketSalesDeadline": "2023-02-28",
+
+"DrawFrequency": "End of each season",
+
+"TicketSaleChannel": ["Online Betting Platforms"],
+
+"WinningsAmount": 600
+
+},
+
+{
+
+"LotteryId": "5555",
+
+"LotteryType": "Raffle Draw",
+
+"TicketPrice": 3.5,
+
+"StartDate": "2022-10-20",
+
+"EndDate": "2022-12-20",
+
+"JackpotAmount": 8000,
+
+"OddsOfWinning": 0.07,
+
+"TicketSalesDeadline": "2022-12-20",
+
+"DrawFrequency": "Monthly",
+
+"TicketSaleChannel": ["Online", "Malls"],
+
+"WinningsAmount": 400
+
+},
+
+{
+
+"LotteryId": "6666",
+
+"LotteryType": "Trivia Quiz",
+
+"TicketPrice": 2.5,
+
+"StartDate": "2022-11-05",
+
+"EndDate": "2023-01-31",
+
+"JackpotAmount": 10000,
+
+"OddsOfWinning": 0.06,
+
+"TicketSalesDeadline": "2023-01-31",
+
+"DrawFrequency": "Biweekly",
+
+"TicketSaleChannel": ["Online Quiz Platforms"],
+
+"WinningsAmount": 450
+
+},
+
+{
+
+"LotteryId": "7777",
+
+"LotteryType": "Treasure Hunt",
+
+"TicketPrice": 4.0,
+
+"StartDate": "2022-12-08",
+
+"EndDate": "2023-02-15",
+
+"JackpotAmount": 15000,
+
+"OddsOfWinning": 0.09,
+
+"TicketSalesDeadline": "2023-02-15",
+
+"DrawFrequency": "Once every two months",
+
+"TicketSaleChannel": ["Outdoor Locations"],
+
+"WinningsAmount": 700
+
+},
+
+{
+
+"LotteryId": "8888",
+
+"LotteryType": "Spin the Wheel",
+
+"TicketPrice": 1.0,
+
+"StartDate": "2022-10-25",
+
+"EndDate": "2022-12-25",
+
+"JackpotAmount": 6000,
+
+"OddsOfWinning": 0.12,
+
+"TicketSalesDeadline": "2022-12-25",
+
+"DrawFrequency": "Daily at a specified time",
+
+"TicketSaleChannel": ["Events", "Fairs"],
+
+"WinningsAmount": 250
+
+}
+
+],
+
+"Product": [
+
+{
+
+"ProductId": "P001",
+
+"Name": "Smart Home Assistant",
+
+"Description": "Voice-controlled virtual assistant device",
+
+"Picture": "smarthomeassistant.jpg",
+
+"Marketer": "TechWiz"
+
+},
+
+{
+
+"ProductId": "P002",
+
+"Name": "Electric Toothbrush",
+
+"Description": "Rechargeable toothbrush with multiple modes",
+
+"Picture": "electrictoothbrush.jpg",
+
+"Marketer": "DentalTech"
+
+},
+
+{
+
+"ProductId": "P003",
+
+"Name": "Wireless Earbuds",
+
+"Description": "Bluetooth earphones for on-the-go music",
+
+"Picture": "wirelessearbuds.jpg",
+
+"Marketer": "SoundWave"
+
+},
+
+{
+
+"ProductId": "P004",
+
+"Name": "Indoor Plants Set",
+
+"Description": "Assortment of low-maintenance indoor plants",
+
+"Picture": "indoorplants.jpg",
+
+"Marketer": "GreenLife"
+
+},
+
+{
+
+"ProductId": "P005",
+
+"Name": "Yoga Mat",
+
+"Description": "Eco-friendly yoga mat for fitness enthusiasts",
+
+"Picture": "yogamat.jpg",
+
+"Marketer": "YogaZen"
+
+},
+
+{
+
+"ProductId": "P006",
+
+"Name": "Camping Lantern",
+
+"Description": "Portable LED lantern for outdoor activities",
+
+"Picture": "campinglantern.jpg",
+
+"Marketer": "OutdoorGear"
+
+},
+
+{
+
+"ProductId": "P007",
+
+"Name": "Digital Kitchen Scale",
+
+"Description": "Precision scale for accurate cooking measurements",
+
+"Picture": "kitchenscale.jpg",
+
+"Marketer": "CookMaster"
+
+},
+
+{
+
+"ProductId": "P008",
+
+"Name": "Travel Neck Pillow",
+
+"Description": "Memory foam pillow for comfortable travel",
+
+"Picture": "neckpillow.jpg",
+
+"Marketer": "TravelEase"
+
+}
+
+],
+
+"ProductInLottery": [
+
+{
+
+"ProductInLotteryId": "PLI001",
+
+"ProductId": "P001",
+
+"LotteryId": "1111",
+
+"WinnerId": "W001",
+
+"ClaimDeadline": "2023-03-15",
+
+"PrizeDistribution": "GIFT_CARD"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI002",
+
+"ProductId": "P002",
+
+"LotteryId": "2222",
+
+"WinnerId": "W002",
+
+"ClaimDeadline": "2023-04-01",
+
+"PrizeDistribution": "POSTAL_SERVICE"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI003",
+
+"ProductId": "P003",
+
+"LotteryId": "3333",
+
+"WinnerId": "W003",
+
+"ClaimDeadline": "2023-05-20",
+
+"PrizeDistribution": "EXPRESS_COURIER"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI004",
+
+"ProductId": "P004",
+
+"LotteryId": "4444",
+
+"WinnerId": "W004",
+
+"ClaimDeadline": "2023-06-05",
+
+"PrizeDistribution": "HAND_DELIVERY"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI005",
+
+"ProductId": "P005",
+
+"LotteryId": "5555",
+
+"WinnerId": "W005",
+
+"ClaimDeadline": "2023-07-10",
+
+"PrizeDistribution": "IN_PERSON_CEREMONY"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI006",
+
+"ProductId": "P006",
+
+"LotteryId": "6666",
+
+"WinnerId": "W006",
+
+"ClaimDeadline": "2023-08-15",
+
+"PrizeDistribution": "BANK_TRANSFER"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI007",
+
+"ProductId": "P007",
+
+"LotteryId": "7777",
+
+"WinnerId": "W007",
+
+"ClaimDeadline": "2023-09-01",
+
+"PrizeDistribution": "LOTTERY_DRAW"
+
+},
+
+{
+
+"ProductInLotteryId": "PLI008",
+
+"ProductId": "P008",
+
+"LotteryId": "8888",
+
+"WinnerId": "W008",
+
+"ClaimDeadline": "2023-10-05",
+
+"PrizeDistribution": "GIFT_CARD"
+
+}
+
+],
+
+"Ticket": [
+
+{
+
+"TicketId": "T001",
+
+"LotteryId": "1111",
+
+"Status": "PURCHASED",
+
+"UserId": "U001",
+
+"PurchaseDate": "2022-11-05",
+
+"ExpiryDate": "2023-01-15",
+
+"PrizeWon": true,
+
+"TicketValidationStatus": "VALID"
+
+},
+
+{
+
+"TicketId": "T002",
+
+"LotteryId": "2222",
+
+"Status": "WINNER",
+
+"UserId": "U002",
+
+"PurchaseDate": "2022-12-15",
+
+"ExpiryDate": "2023-02-01",
+
+"PrizeWon": false,
+
+"TicketValidationStatus": "INVALID"
+
+},
+
+{
+
+"TicketId": "T003",
+
+"LotteryId": "3333",
+
+"Status": "NOT_A_WINNER",
+
+"UserId": "U003",
+
+"PurchaseDate": "2022-11-20",
+
+"ExpiryDate": "2023-01-20",
+
+"PrizeWon": false,
+
+"TicketValidationStatus": "DUPLICATE"
+
+},
+
+{
+
+"TicketId": "T004",
+
+"LotteryId": "4444",
+
+"Status": "CLAIMED",
+
+"UserId": "U004",
+
+"PurchaseDate": "2022-12-25",
+
+"ExpiryDate": "2023-01-25",
+
+"PrizeWon": true,
+
+"TicketValidationStatus": "EXPIRED"
+
+},
+
+{
+
+"TicketId": "T005",
+
+"LotteryId": "5555",
+
+"Status": "EXPIRED",
+
+"UserId": "U005",
+
+"PurchaseDate": "2022-11-10",
+
+"ExpiryDate": "2023-01-10",
+
+"PrizeWon": false,
+
+"TicketValidationStatus": "INVALID"
+
+},
+
+{
+
+"TicketId": "T006",
+
+"LotteryId": "6666",
+
+"Status": "PURCHASED",
+
+"UserId": "U006",
+
+"PurchaseDate": "2022-11-25",
+
+"ExpiryDate": "2023-01-31",
+
+"PrizeWon": true,
+
+"TicketValidationStatus": "VALID"
+
+},
+
+{
+
+"TicketId": "T007",
+
+"LotteryId": "7777",
+
+"Status": "WINNER",
+
+"UserId": "U007",
+
+"PurchaseDate": "2022-12-01",
+
+"ExpiryDate": "2023-02-15",
+
+"PrizeWon": false,
+
+"TicketValidationStatus": "INVALID"
+
+},
+
+{
+
+"TicketId": "T008",
+
+"LotteryId": "8888",
+
+"Status": "CLAIMED",
+
+"UserId": "U008",
+
+"PurchaseDate": "2022-10-30",
+
+"ExpiryDate": "2022-12-25",
+
+"PrizeWon": true,
+
+"TicketValidationStatus": "EXPIRED"
+
+}
+
+],
+
+"User": [
+
+{
+
+"UserId": "U001",
+
+"FirstName": "Eva",
+
+"LastName": "Smith",
+
+"Email": "evas@example.com",
+
+"Password": "securepass123",
+
+"PhoneNumber": "+1122334455",
+
+"Address": "789 Park Ave, City, Country",
+
+"AccountType": "Premium"
+
+},
+
+{
+
+"UserId": "U002",
+
+"FirstName": "Alex",
+
+"LastName": "Brown",
+
+"Email": "alexb@example.com",
+
+"Password": "strongpass456",
+
+"PhoneNumber": "+9988776655",
+
+"Address": "567 Lake St, Town, Country",
+
+"AccountType": "Standard"
+
+},
+
+{
+
+"UserId": "U003",
+
+"FirstName": "Olivia",
+
+"LastName": "Johnson",
+
+"Email": "oliviaj@example.com",
+
+"Password": "safe321",
+
+"PhoneNumber": "+1234567890",
+
+"Address": "456 Elm St, Village, Country",
+
+"AccountType": "Basic"
+
+},
+
+{
+
+"UserId": "U004",
+
+"FirstName": "Harry",
+
+"LastName": "Wilson",
+
+"Email": "harryw@example.com",
+
+"Password": "hwilson789",
+
+"PhoneNumber": "+5544332211",
+
+"Address": "132 Grove Ave, City, Country",
+
+"AccountType": "Standard"
+
+},
+
+{
+
+"UserId": "U005",
+
+"FirstName": "Sophia",
+
+"LastName": "Martin",
+
+"Email": "sophiam@example.com",
+
+"Password": "smartin90",
+
+"PhoneNumber": "+2233445566",
+
+"Address": "789 Ridge St, Town, Country",
+
+"AccountType": "Basic"
+
+},
+
+{
+
+"UserId": "U006",
+
+"FirstName": "Mia",
+
+"LastName": "Garcia",
+
+"Email": "miag@example.com",
+
+"Password": "garcia567",
+
+"PhoneNumber": "+7788990011",
+
+"Address": "234 Hill Ave, City, Country",
+
+"AccountType": "Premium"
+
+},
+
+{
+
+"UserId": "U007",
+
+"FirstName": "William",
+
+"LastName": "Lopez",
+
+"Email": "williaml@example.com",
+
+"Password": "will1234",
+
+"PhoneNumber": "+1122334455",
+
+"Address": "111 River St, Town, Country",
+
+"AccountType": "Standard"
+
+},
+
+{
+
+"UserId": "U008",
+
+"FirstName": "Ava",
+
+"LastName": "Taylor",
+
+"Email": "avat@example.com",
+
+"Password": "taylor99",
+
+"PhoneNumber": "+6655443322",
+
+"Address": "321 Bay Ave, Village, Country",
+
+"AccountType": "Basic"
+
+}
+
+]
+
+}
+

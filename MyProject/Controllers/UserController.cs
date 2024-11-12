@@ -6,44 +6,55 @@ using MyProject.Services;
 
 namespace MyProject.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("MyProject/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
-        public UserService UserS  { get; set; }
+        //readonly UserService UserS = new UserService(); 
+        readonly UserService _usersSerice;
+        public UserController(UserService usersSerice)
+        {
+            _usersSerice = usersSerice;
+        }
+
         // GET: api/<UserController>
         [HttpGet]
-        public IEnumerable<User> Get()
+        public ActionResult<List<User>> Get()
         {
-            return UserS.GetUsers();
+            return _usersSerice.GetUsers();
         }
 
         // GET api/<UserController>/5
         [HttpGet("{id}")]
-        public User Get(int id)
+        public ActionResult<User> Get(int id)
         {
-            return UserS.GetUserById(id);
+            User u= _usersSerice.GetUserById(id);
+            if (u == null)
+                return NotFound(u);
+            return u;
         }
 
         // POST api/<UserController>
         [HttpPost]
-        public void Post([FromBody] User user)
+        public ActionResult<bool> Post([FromBody] User user)
         {
-            UserS.AddUser(user);
+            return _usersSerice.AddUser(user);
         }
 
         // PUT api/<UserController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] User user)
+        public ActionResult<bool> Put(int id, [FromBody] User user)
         {
-            UserS.UpdateUser(id, user);
+            return _usersSerice.UpdateUser(id, user);
         }
 
         // DELETE api/<UserController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult<bool> Delete(int id)
         {
-            UserS.RemoveUser(id);
+            return _usersSerice.RemoveUser(id);
         }
+
+        
     }
 }
