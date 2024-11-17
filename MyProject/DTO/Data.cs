@@ -2,8 +2,8 @@
 
 namespace MyProject.DTO
 {
-    public class DataUsers
+    public class Data<T>
     {
-        public List<User> db { get; set; }
+        public List<T> db { get; set; }
     }
 }

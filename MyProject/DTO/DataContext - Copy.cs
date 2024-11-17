@@ -5,40 +5,44 @@ using System.Text.Json;
 using System.IO;
 using System.Diagnostics;
 
+
 namespace MyProject.DTO
 {
     public class DataContext:IDataContext
     {
-        public List<User> Users { get; set; }
         public DataContext()
         {
 
         }
 
-        public List<User> LoadData()
-        {
-            // string path = Path.Combine(AppContext.BaseDirectory, "Data", "Data.json");
+        //public string Combine(string name)
+        //{
 
+        //}
+        public List<T> LoadData<T>()
+        {
+            //string path = Path.Combine(AppContext.TargetFrameworkName, "Data");
             string path = @"C:\Users\user1\Desktop\dotenet project\MyProject\Data\Data.json";
 
             string jsonString = File.ReadAllText(path);
-            var AllUsers = JsonSerializer.Deserialize<DataUsers>(jsonString);// typeof(DataUsers)); ;
-
-            return AllUsers.db;
+            //var AllUsers = JsonSerializer.Deserialize<DataUsers>(jsonString);// typeof(DataUsers)); ;
+            var data = JsonSerializer.Deserialize<Data<T>>(jsonString);
+            return data.db;
         }
 
 
-        public bool SaveData(List<User> users)
+        public bool SaveData<T>(List<T> data)
         {
             try
             {
+                string path = @"C:\Users\user1\Desktop\dotenet project\MyProject\Data\Data.json";
+                //string path = Path.Combine(AppContext.BaseDirectory, "Data");
 
-                string path = Path.Combine(AppContext.BaseDirectory, "Data", "data.json");
+                Data<T> dataToSave = new Data<T> { db = data };
+                var jsonString = JsonSerializer.Serialize<Data<T>>(dataToSave);
 
-
-                DataUsers dataUsers = new DataUsers();
-                dataUsers.db = users;
-                string jsonString = JsonSerializer.Serialize<DataUsers>(dataUsers);
+                //string jsonString = JsonConvert.SerializeObject(dataToSave, Formatting.Indented);
+                //= JsonSerializer.Serialize<DataUsers>(dataUsers);
                 if (File.Exists(path))
                 {
                     File.Delete(path);

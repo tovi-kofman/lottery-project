@@ -11,24 +11,24 @@ namespace MyProject.Controllers
     public class UserController : ControllerBase
     {
         //readonly UserService UserS = new UserService(); 
-        readonly UserService _usersSerice;
-        public UserController(UserService usersSerice)
+        readonly UserService _usersService;
+        public UserController(UserService usersService)
         {
-            _usersSerice = usersSerice;
+            _usersService = usersService;
         }
 
         // GET: api/<UserController>
         [HttpGet]
         public ActionResult<List<User>> Get()
         {
-            return _usersSerice.GetUsers();
+            return _usersService.GetUsers();
         }
 
         // GET api/<UserController>/5
         [HttpGet("{id}")]
         public ActionResult<User> Get(int id)
         {
-            User u= _usersSerice.GetUserById(id);
+            User u= _usersService.GetUserById(id);
             if (u == null)
                 return NotFound(u);
             return u;
@@ -38,21 +38,23 @@ namespace MyProject.Controllers
         [HttpPost]
         public ActionResult<bool> Post([FromBody] User user)
         {
-            return _usersSerice.AddUser(user);
+             if(_usersService.AddUser(user))
+                return true;
+             return BadRequest(user);
         }
 
         // PUT api/<UserController>/5
         [HttpPut("{id}")]
         public ActionResult<bool> Put(int id, [FromBody] User user)
         {
-            return _usersSerice.UpdateUser(id, user);
+            return _usersService.UpdateUser(id, user);
         }
 
         // DELETE api/<UserController>/5
         [HttpDelete("{id}")]
         public ActionResult<bool> Delete(int id)
         {
-            return _usersSerice.RemoveUser(id);
+            return _usersService.RemoveUser(id);
         }
 
         

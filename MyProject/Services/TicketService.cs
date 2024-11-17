@@ -1,50 +1,60 @@
-﻿//using Microsoft.AspNetCore.Mvc;
-//using MyProject.DTO;
-//using MyProject.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
+using MyProject.DTO;
+using MyProject.Entities;
+using MyProject.Interface;
 
-//namespace MyProject.Services
-//{
-//    public class TicketService
-//    {
-//        //static DataContext DataContextManager { get; set; }
-//        public DataContext DataContextManager = ManagerDataContext.DataContext;
+namespace MyProject.Services
+{
+    public class TicketService
+    {
+        //static DataContext DataContextManager { get; set; }
+        readonly IDataContext _dataContext;
+        public TicketService(IDataContext dataContext)
+        {
+            _dataContext = dataContext;
+        }
 
+        public List<Ticket> GetTickets()
+        {
+            return _dataContext.LoadData<Ticket>();
+        }
+        public Ticket GetTicketById(int id)
+        {
+            return _dataContext.LoadData<Ticket>().FirstOrDefault(x => x.TicketId == id);
+        }
+        public bool AddTicket(Ticket ticket)
+        {
+            var tickets=_dataContext.LoadData<Ticket>();
+            tickets.Add(ticket);
+           return  _dataContext.SaveData<Ticket>(tickets);
+        }
 
-//        public List<Ticket> GetTickets()
-//        {
-//            return DataContextManager.Tickets;
-//        }
-//        public Ticket GetTicketById(int id)
-//        {
-//            return DataContextManager.Tickets.FirstOrDefault(x => x.TicketId == id);
-//        }
-//        public void AddTicket(Ticket ticket)
-//        {
-//            DataContextManager.Tickets.Add(ticket);
-//        }
+        public bool UpdateTicket(int id, Ticket ticket)
+        {
+            var tickets= _dataContext.LoadData<Ticket>();
+            foreach (Ticket tick in tickets)
+            {
+                if (tick.TicketId == id)
+                {
+                    tick.TicketValidationStatus = ticket.TicketValidationStatus;
+                    tick.Status = ticket.Status;
+                    tick.PurchaseDate = ticket.PurchaseDate;
+                    tick.ExpiryDate = ticket.ExpiryDate;
+                    tick.PrizeWon = ticket.PrizeWon;
+                    tick.LotteryId = ticket.LotteryId;
+                    tick.UserId = ticket.UserId;
+                    return _dataContext.SaveData(tickets);
+                }
+            }
+            return false;
+        }
+        public bool RemoveTicket(int id)
+        {
+            var tickets= _dataContext.LoadData<Ticket>();
+            return tickets.Remove(tickets.FirstOrDefault(x => x.TicketId == id));
+        }
 
-//        public bool UpdateTicket(int id,Ticket ticket)
-//        {
-//            foreach (Ticket tick in DataContextManager.Tickets)
-//            {
-//                if(tick.TicketId==id)
-//                {
-//                    tick.TicketValidationStatus = ticket.TicketValidationStatus;
-//                    tick.Status = ticket.Status;
-//                    tick.PurchaseDate = ticket.PurchaseDate;
-//                    tick.ExpiryDate = ticket.ExpiryDate;
-//                    tick.PrizeWon = ticket.PrizeWon;
-//                    tick.LotteryId = ticket.LotteryId;
-//                    tick.UserId = ticket.UserId;
-//                    return true;
-//                }
-//            }
-//            return false;
-//        }
-//        public bool RemoveTicket(int id)
-//        {
-//            return DataContextManager.Tickets.Remove(DataContextManager.Tickets.FirstOrDefault(x => x.TicketId== id));
-//        }
+      
+    }
 
-//    }
-//}
+}

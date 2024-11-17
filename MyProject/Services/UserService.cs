@@ -9,36 +9,35 @@ namespace MyProject.Services
     {
         //static DataContext DataContextManager { get; set; }
         //public DataContext DataContextManager = ManagerDataContext.DataContext;
-        readonly IDataContext _dataContext;
+        readonly IDataContext  _dataContext;
         public UserService(IDataContext dataContext)
         {
             _dataContext = dataContext;
         }
         public List<User> GetUsers()
         {
-            var users= _dataContext.LoadData();
-            return users;
+            return _dataContext.LoadData<User>();
         }
         public User GetUserById(int id)
         {
-            return _dataContext.LoadData().Where(x => x.UserId == id).FirstOrDefault();
+            return _dataContext.LoadData<User>().FirstOrDefault(x => x.UserId == id);
         }
         public bool AddUser(User user)
         {
-            //TzValid tzValid = new TzValid();
-            //ErrorTZ error;
-            //if (tzValid.ISOK(user.Tz, out error))
-            //{
-
-            //}
-            //else { Console.WriteLine(error); }
-            var users = _dataContext.LoadData();
-            users.Add(user);
-            return _dataContext.SaveData(users);
+            TzValid tzValid = new TzValid();
+            ErrorTZ error;
+            if (tzValid.ISOK(user.Tz, out error))
+            {
+                var users = _dataContext.LoadData<User>();
+                users.Add(user);
+                return _dataContext.SaveData(users);
+            }
+            else { Console.WriteLine(error); }
+           return false;
         }
         public bool UpdateUser(int id,User user)
         {
-            var users = _dataContext.LoadData();
+            var users = _dataContext.LoadData<User>();
             foreach (User u in users)
             {
                 if (u.UserId == id)
@@ -58,8 +57,9 @@ namespace MyProject.Services
         }
         public bool RemoveUser(int id)
         {
-            var users = _dataContext.LoadData();
-            return users.Remove(users.FirstOrDefault(x => x.UserId== id));
+            var users = _dataContext.LoadData<User>();
+             users.Remove(users.FirstOrDefault(x => x.UserId== id));
+            return _dataContext.SaveData(users);
         }
 
        
